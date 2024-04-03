@@ -1,0 +1,234 @@
+.style-0 {
+    cursor: auto;
+    margin: 0px;
+    background-color: rgb(4, 4, 8);
+    overflow-y: hidden;
+    font-family: monospace;
+    height: 584.094px;
+}
+
+.style-1 {
+    width: 100%;
+    height: 684px;
+}
+
+.style-2 {
+    visibility: hidden;
+    position: absolute;
+    left: 683px;
+    top: 259.594px;
+    transform: matrix(1, 0, 0, 1, -90, -15.562);
+    text-align: center;
+}
+
+.style-3 {
+    text-shadow: 0px 0px 0px;
+    line-height: 10px;
+    font-family: monospace;
+    text-decoration: none solid rgb(165, 105, 255);
+    font-style: normal;
+    user-select: none;
+    color: rgb(165, 105, 255);
+    font-size: 16px;
+    list-style: outside none none;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.style-4 {
+    visibility: visible;
+    width: 50%;
+    position: absolute;
+    left: 683px;
+    top: 259.594px;
+    transform: matrix(1, 0, 0, 1, -341.5, -87.85);
+    text-align: center;
+}
+
+.style-5 {
+    color: rgb(240, 240, 240);
+    text-shadow: rgb(165, 105, 255) 0px 0px 8px;
+    list-style: outside none none;
+    line-height: 10px;
+    margin-top: 5px;
+    text-align: center;
+    user-select: none;
+}
+
+.style-6 {
+    filter: brightness(10%) sepia(1) saturate(100) hue-rotate(275deg) drop-shadow(rgb(170, 55, 255) 0px 0px 0px);
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    position: relative;
+    user-select: none;
+}
+
+.style-7 {
+    text-shadow: 0px 0px 0px;
+    line-height: 10px;
+    font-family: monospace;
+    text-decoration: none solid rgb(165, 105, 255);
+    font-style: normal;
+    user-select: none;
+    color: rgb(165, 105, 255);
+    font-size: 16px;
+    list-style: outside none none;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.style-8 {
+    text-shadow: 0px 0px 0px;
+    line-height: 10px;
+    font-family: monospace;
+    font-style: normal;
+    user-select: none;
+    color: rgb(240, 240, 240);
+    font-size: 13px;
+}
+
+.style-9 {
+    color: rgb(240, 240, 240);
+    text-shadow: rgb(165, 105, 255) 0px 0px 8px;
+    list-style: outside none none;
+    line-height: 10px;
+    margin-top: 5px;
+    text-align: center;
+    user-select: none;
+}
+
+.style-10 {
+    text-shadow: 0px 0px 0px;
+    color: rgb(240, 240, 240);
+    text-decoration: none solid rgb(240, 240, 240);
+    font-family: monospace;
+    user-select: none;
+}
+
+.style-11 {
+    text-shadow: 0px 0px 0px;
+    color: rgb(240, 240, 240);
+    text-decoration: none solid rgb(240, 240, 240);
+    font-family: monospace;
+    user-select: none;
+}
+
+.style-12 {
+    text-shadow: 0px 0px 0px;
+    color: rgb(240, 240, 240);
+    text-decoration: none solid rgb(240, 240, 240);
+    font-family: monospace;
+    user-select: none;
+}
+
+.style-13 {
+    text-shadow: 0px 0px 0px;
+    color: rgb(240, 240, 240);
+    text-decoration: none solid rgb(240, 240, 240);
+    font-family: monospace;
+    user-select: none;
+}
+
+.style-14 {
+    display: block;
+    color: rgb(240, 240, 240);
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px none rgb(240, 240, 240);
+    border-radius: 5px;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+    font-family: monospace;
+    font-style: normal;
+    font-size: 13px;
+}
+
+.style-15 {
+    display: block;
+    color: rgb(240, 240, 240);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(107, 114, 128);
+    border-radius: 0px;
+    outline: rgb(240, 240, 240) none 0px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px 12px;
+    font-family: monospace;
+    font-style: normal;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Rest of the styles are left untouched as they are unused in the provided HTML snippet */
+cursor: auto;
+        margin: 0px;
+        background-color: rgb(4, 4, 8);
+        font-family: monospace;
+      }
+
+      canvas {
+        width: 100%;
+        height: 684px;
+      }
+
+      .container-init {
+        visibility: hidden;
+        position: absolute;
+        left: 683px;
+        top: 259.594px;
+        transform: matrix(1, 0, 0, 1, -90, -15.562);
+        text-align: center;
+      }
+
+      .container-main {
+        visibility: visible;
+        width: 50%;
+        position: absolute;
+        left: 683px;
+        top: 259.594px;
+        transform: matrix(1, 0, 0, 1, -341.5, -87.85);
+        text-align: center;
+      }
+
+      img {
+        filter: brightness(10%) sepia(1) saturate(100) hue-rotate(275deg)
+          drop-shadow(rgb(170, 55, 255) 0px 0px 0px);
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: 0 auto 20px;
+        position: relative;
+      }
+
+      ul {
+        text-shadow: 0px 0px 0px;
+        line-height: 10px;
+        font-family: monospace;
+        text-decoration: none solid rgb(165, 105, 255);
+        font-style: normal;
+        user-select: none;
+        font-size: 16px;
+        list-style: outside none none;
+        margin-top: 5px;
+        text-align: center;
+        color: rgb(165, 105, 255);
+      }
+
+      a {
+        text-shadow: 0px 0px 0px;
+        line-height: 10px;
+        font-family: monospace;
+        font-style: normal;
+        user-select: none;
+        font-size: 13px;
+        color: rgb(240, 240, 240);
+        text-decoration: none solid rgb(240, 240, 240);
+      }
+
+      .snipcss-modal {
+        display: none;
+      }

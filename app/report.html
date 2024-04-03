@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background: #19191a;
+      }
+
+      #report-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #242424;
+        margin-top: 50px;
+        color: white;
+      }
+
+      #report-title {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      #bug-report {
+        width: 100%;
+        height: 150px;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+
+      .action-btn {
+        display: inline-block;
+        height: 40px;
+        margin-right: 10px;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        font-family: Metropolis-Bold, sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        border-radius: 7px;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        transition: color 0.15s, background-color 0.15s, border-color 0.15s,
+          box-shadow 0.15s;
+        outline: 0;
+      }
+
+      #submit-btn {
+        color: rgb(255, 255, 255);
+        background: rgb(36, 36, 36);
+        padding: 8px 22px;
+        cursor: pointer;
+      }
+
+      #submit-btn:hover {
+        background: #00da83;
+        color: rgb(255, 255, 255);
+        padding: 10px 24px;
+      }
+
+      #submit-btn:focus {
+        outline: 0 !important;
+      }
+
+      #error-message {
+        color: #ff6b6b;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="report-container">
+      <h2 id="report-title">Report Bugs</h2>
+      <textarea id="bug-report" placeholder="Describe the bugs you've found..."></textarea>
+      <br />
+      <button id="submit-btn" class="action-btn" onclick="submitReport()">Submit</button>
+      <button class="action-btn" onclick="clearReport()">Clear</button>
+      <p id="error-message"></p>
+    </div>
+
+    <script>
+      function submitReport() {
+        var bugReport = document.getElementById("bug-report").value.trim();
+
+        if (bugReport !== "") {
+          var webhookURL = "https://discord.com/api/webhooks/1153849889873203220/4PNEe2bCRoMHnPLSaJllDARBAMTlPVhNnV_-cUkMI3XgBm_RXtS-k-TKvAX0rhcYIDoi";
+          var payload = { content: bugReport };
+
+          fetch(webhookURL, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-Requested-With": "XMLHttpRequest",
+            },
+            mode: "cors",
+            body: JSON.stringify(payload),
+          })
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Failed to send bug report");
+              }
+              alert("Bug report submitted successfully!");
+            })
+            .catch((error) => {
+              console.error(error);
+              displayErrorMessage("Failed to submit bug report. Please try again later.");
+            });
+        } else {
+          displayErrorMessage("Bug report cannot be empty. Please provide details.");
+        }
+      }
+
+      function clearReport() {
+        document.getElementById("bug-report").value = "";
+        clearErrorMessage();
+      }
+
+      function displayErrorMessage(message) {
+        var errorMessageElement = document.getElementById("error-message");
+        errorMessageElement.textContent = message;
+      }
+
+      function clearErrorMessage() {
+        var errorMessageElement = document.getElementById("error-message");
+        errorMessageElement.textContent = "";
+      }
+    </script>
+  </body>
+</html>

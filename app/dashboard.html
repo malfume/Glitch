@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+</head>
+<body>
+  <h1>Dashboard</h1>
+
+  <!-- Add a textarea for code input with syntax highlighting -->
+  <textarea id="codeInput" rows="10" cols="50" placeholder="Enter your code here"></textarea>
+
+  <!-- Add a button to send code to Discord webhook -->
+  <button onclick="sendCodeToDiscord()">Send to Discord</button>
+
+  <script>
+    // Function to send code to Discord webhook
+    function sendCodeToDiscord() {
+      const code = document.getElementById("codeInput").value;
+      const webhookURL = "https://discord.com/api/webhooks/1128871709936717824/hSF3GxSjgImJbd4EJw1JT9JvGlpxKxrtF2L6I4cct_KAUofQLjDwHgavQq-TyI8aYvj4";
+
+      // Create a JSON payload
+      const payload = {
+        content: code
+      };
+
+      // Send the payload to the Discord webhook
+      fetch(webhookURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      }).then(response => {
+        if (response.ok) {
+          alert("Code sent to Discord successfully!");
+        } else {
+          alert("Error sending code to Discord.");
+        }
+      }).catch(error => {
+        console.error(error);
+        alert("An error occurred while sending the code.");
+      });
+    }
+  </script>
+</body>
+</html>
